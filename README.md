@@ -50,7 +50,7 @@ Note : If some fields are missing, check [troubleshooting missing fields](#missi
 
 ## Install
 
-`npm install gatsby-source-wordpress`
+`npm install @otakism/gatsby-source-wordpress`
 
 ## How to use
 
@@ -65,7 +65,7 @@ module.exports = {
      * plugins. Here the site sources its data from WordPress.
      */
     {
-      resolve: "gatsby-source-wordpress",
+      resolve: "@otakism/gatsby-source-wordpress",
       options: {
         /*
          * The base URL of the WordPress site without the trailingslash and the protocol. This is required.
@@ -255,7 +255,7 @@ If you see a page on your site, rather than the JSON output, check if your perma
 
 ## Fetching Data: WordPress REST API Route Selection
 
-By default `gatsby-source-wordpress` plugin will fetch data from all endpoints provided by introspection `/wp-json` response. To customize the routes fetched, two configuration options are available: `includeRoutes` for whitelisting and `excludeRoutes` for blacklisting. Both options expect an array of glob patterns. Glob matching is done by [minimatch](https://github.com/isaacs/minimatch). To test your glob patterns, [use this tool](https://pthrasher.github.io/minimatch-test/). You can inspect discovered routes by using `verboseOutput: true` configuration option.
+By default `@otakism/gatsby-source-wordpress` plugin will fetch data from all endpoints provided by introspection `/wp-json` response. To customize the routes fetched, two configuration options are available: `includeRoutes` for whitelisting and `excludeRoutes` for blacklisting. Both options expect an array of glob patterns. Glob matching is done by [minimatch](https://github.com/isaacs/minimatch). To test your glob patterns, [use this tool](https://pthrasher.github.io/minimatch-test/). You can inspect discovered routes by using `verboseOutput: true` configuration option.
 
 If an endpoint is whitelisted and not blacklisted, it will be fetched. Otherwise, it will be ignored.
 
@@ -798,7 +798,7 @@ GraphQL nodes. You can extend the normalizers by modifying the normalizers array
 ### Example:
 
 You have a custom post type `movie` and a related custom taxonomy `genre` in your WordPress site. Since
-`gatsby-source-wordpress` doesn't know about the relation of the two, we can build an additional normalizer function to map the movie GraphQL nodes to the genre nodes:
+`@otakism/gatsby-source-wordpress` doesn't know about the relation of the two, we can build an additional normalizer function to map the movie GraphQL nodes to the genre nodes:
 
 ```javascript
 const mapMoviesToGenres = {
@@ -828,7 +828,7 @@ In your `gatsby-config.js` you can then add the normalizer to the plugin options
 module.exports = {
   plugins: [
     {
-      resolve: "gatsby-source-wordpress",
+      resolve: "@otakism/gatsby-source-wordpress",
       options: {
         // ...
         normalizers: normalizers => [...normalizers, mapMoviesToGenres],

@@ -1,46 +1,48 @@
 {
   "name": "@otakism/gatsby-source-wordpress",
   "description": "Gatsby source plugin for building websites using the WordPress CMS as a data source.",
-  "version": "3.12.0-next.0",
+  "version": "3.12.1",
   "author": "Sebastien Fichot <fichot.sebastien@gmail.com>",
+  "contributors": [
+    "Art Chen <me@otakism.com>"
+  ],
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/artchen/gatsby-source-wordpress/issues"
   },
-  "bundledDependencies": [],
   "dependencies": {
-    "@babel/runtime": "^7.12.5",
+    "@babel/runtime": "^7.13.9",
     "axios": "^0.21.1",
     "better-queue": "^3.8.10",
     "bluebird": "^3.7.2",
-    "deep-map": "^1.5.0",
-    "deep-map-keys": "^1.2.0",
-    "gatsby-source-filesystem": "^2.12.0-next.0",
+    "deep-map": "^2.0.0",
+    "deep-map-keys": "^2.0.1",
+    "gatsby-source-filesystem": "^3.0.0",
     "json-stringify-safe": "^5.0.1",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "minimatch": "^3.0.4",
-    "qs": "^6.9.4"
+    "qs": "^6.9.6"
   },
   "deprecated": false,
   "devDependencies": {
-    "@babel/cli": "^7.12.1",
-    "@babel/core": "^7.12.3",
-    "babel-preset-gatsby-package": "^0.13.0-next.0",
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "babel-preset-gatsby-package": "^1.0.0",
     "cross-env": "^7.0.3"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-wordpress#readme",
+  "homepage": "https://github.com/artchen/gatsby-source-wordpress/tree/master#readme",
   "keywords": [
     "gatsby",
     "gatsby-plugin",
-    "gatsby-source-plugin"
+    "gatsby-source-plugin",
+    "wordpress"
   ],
   "license": "MIT",
   "peerDependencies": {
-    "gatsby": "^2.0.15"
+    "gatsby": "^3.0.3"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby.git",
-    "directory": "packages/gatsby-source-wordpress"
+    "url": "https://github.com/artchen/gatsby-source-wordpress.git"
   },
   "scripts": {
     "build": "babel src --out-dir . --ignore \"**/__tests__\"",
